@@ -92,8 +92,6 @@ if (ENV_DEVELOPMENT) {
 
   config.entry.main.unshift(
     `webpack-dev-server/client?http://${HOST}:${PORT}`,
-    'webpack/hot/only-dev-server',
-    'react-hot-loader/patch',
     'babel-polyfill'
   );
 
@@ -103,10 +101,6 @@ if (ENV_DEVELOPMENT) {
       loaders.scss
     ]
   };
-
-  config.plugins.push(
-    new webpack.HotModuleReplacementPlugin()
-  );
 
   config.devServer = {
     contentBase: './src',

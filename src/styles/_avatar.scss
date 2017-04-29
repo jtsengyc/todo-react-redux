@@ -1,0 +1,11 @@
+.user {
+  flex: 0 0 auto;
+  .user-avatar {
+    width: 30px;
+    border: 0 solid;
+    border-radius: 30px;
+  }
+  .user-handle {
+    padding-left: 5px;
+  }
+}

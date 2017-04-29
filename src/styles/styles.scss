@@ -1,0 +1,59 @@
+@import
+"settings";
+
+@import
+"~minx/src/settings",
+"~minx/src/functions",
+"~minx/src/mixins",
+"~minx/src/reset",
+"~minx/src/elements";
+
+@import
+"grid",
+'button',
+"header",
+"issueRow",
+"issueList",
+"paginator",
+"avatar",
+"issueLabels",
+"issueDetails",
+"loader";
+
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding: 0 40px 20px 40px;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  &:hover {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.hide {
+  display: none !important;
+}
+
+::selection {
+  background: rgba(200, 200, 255, .1);
+}
+
+.returnBtn {
+  text-align: center;
+  border: 1px solid #666;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 3px;
+  cursor: pointer;
+  &:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.75);
+  }
+}

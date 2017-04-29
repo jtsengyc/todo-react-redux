@@ -1,0 +1,38 @@
+.issue-row {
+  padding: 20px 10px;
+  cursor: pointer;
+  &:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  &:not(:first-child) {
+    border-top: 1px solid; 
+  }
+
+  .issue-number {
+    font-size: 14px;
+  }
+  .issue-title-bar {
+    display: flex;
+    justify-content: space-between;
+
+    .issue-title-holder {
+      display: flex;
+      flex-wrap: wrap;
+
+      .issue-title {
+        font-weight: bold;
+        color: white;
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+    }
+    
+    .issue-reporter {
+      flex: 0 0 auto;
+    }
+  }
+  .issue-summary {
+    padding-top: 5px;
+  }
+}

@@ -1,0 +1,21 @@
+//=========================================================
+//  Header
+//---------------------------------------------------------
+
+.header {
+  margin: 20px 0;
+  font-size: 30px;
+  text-align: center;
+
+  .github-link {
+    @include fa-icon(github);
+    &:before {
+      padding-right: 5px;
+      font-family: 'FontAwesome';
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+

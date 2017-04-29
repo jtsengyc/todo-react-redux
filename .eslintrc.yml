@@ -29,7 +29,7 @@ rules:
   accessor-pairs: 0
   block-scoped-var: 0
   block-spacing: 2
-  brace-style: [2, "stroustrup", {allowSingleLine: true}]
+  brace-style: [2, "1tbs", {allowSingleLine: true}]
   callback-return: 0
   camelcase: [2, {properties: "always"}]
   comma-dangle: 2
@@ -82,7 +82,7 @@ rules:
   no-class-assign: 2
   no-cond-assign: 2
   no-confusing-arrow: 0
-  no-console: 2
+  no-console: 1
   no-const-assign: 2
   no-constant-condition: 2
   no-continue: 0
@@ -135,7 +135,7 @@ rules:
   no-native-reassign: 2
   no-negated-condition: 0
   no-negated-in-lhs: 2
-  no-nested-ternary: 2
+  no-nested-ternary: 1
   no-new: 2
   no-new-func: 2
   no-new-object: 2
@@ -253,7 +253,7 @@ rules:
   react/jsx-no-comment-textnodes: 2
   react/jsx-no-duplicate-props: 2
   react/jsx-no-literals: 0
-  react/jsx-no-target-blank: 2
+  react/jsx-no-target-blank: 1
   react/jsx-no-undef: 2
   react/jsx-pascal-case: 2
   react/jsx-sort-props: 0
