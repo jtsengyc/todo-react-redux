@@ -10,7 +10,7 @@ Quick Start
 
 ```shell
 $ git clone https://github.com/jtsengyc/twitter-app.git
-$ cd todo-react-redux
+$ cd twitter-app
 $ npm install
 $ npm run build
 $ npm run server
