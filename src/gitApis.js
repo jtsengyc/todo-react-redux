@@ -6,7 +6,7 @@ export function getTotalIssueCount() {
   return new Promise((resolve, reject) => {
     $.get(url)
       .done(result => {
-        console.debug(result);
+        // console.debug(result);
         if (result.open_issues_count) {
           resolve(result.open_issues_count);
         } else {
@@ -24,7 +24,7 @@ export function getIssueList(pageNumber) {
   return new Promise((resolve, reject) => {
     $.get(url)
       .done(result => {
-        console.debug(result);
+        // console.debug(result);
         if (result) {
           resolve(result);
         } else {
@@ -43,7 +43,7 @@ export function getIssueDetails(issueId) {
   return new Promise((resolve, reject) => {
     $.get(url)
       .done(result => {
-        console.debug(result);
+        // console.debug(result);
         if (result) {
           resolve(result);
         } else {
@@ -67,10 +67,11 @@ export function getIssueComments(issueId, maxComments) {
   return new Promise((resolve, reject) => {
     $.when(...apiCalls).then(
       function onComplete() {
+        // console.debug(arguments);
         let results = [];
         for (let i = 0; i < apiCalls.length; i++) {
           if (!!arguments[i] && !!arguments[i][0]) {
-            results = results.concat(arguments[i][0]);
+            results = results.concat(arguments[i]);
           }
         }
         resolve(results);

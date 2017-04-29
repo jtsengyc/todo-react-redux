@@ -51,7 +51,6 @@ export default class IssueView extends Component {
     const {
       handleDisplayIssue
     } = this.props;
-    // move the detail rendering into some component class
     return (
       <div>
         {isLoading ?

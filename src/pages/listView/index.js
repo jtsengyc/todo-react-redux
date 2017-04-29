@@ -54,7 +54,6 @@ export default class ListView extends Component {
       handleDisplayIssue,
       handleTogglePage
     } = this.props;
-    // move the detail rendering into some component class
     return (
       <div>
         {isLoading ?

@@ -52,22 +52,20 @@ function parseBodyToHtml(body) {
   let outputHtml = [];
   let codeOpenTagUsed = false;
   for (let i = 0; i < htmlResult.length; i++) {
-    console.log(htmlResult[i]);
-    if (htmlResult[i].indexOf('###') === 0) {
+    if (htmlResult[i].indexOf('###') === 0) { // handle title
       outputHtml.push(`<b>${htmlResult[i].slice(4)}</b>`);
-    } else if (htmlResult[i].indexOf('```') === 0) {
+    } else if (htmlResult[i].indexOf('```') === 0) { // handle code block
       if (codeOpenTagUsed) {
         outputHtml.push('</code>');
       } else {
         outputHtml.push('<code>');
       }
       codeOpenTagUsed = !codeOpenTagUsed;
-    } else if (htmlResult[i].indexOf('@') !== -1 && !codeOpenTagUsed) {
+    } else if (htmlResult[i].indexOf('@') !== -1 && !codeOpenTagUsed) { // handle github handler
       outputHtml.push(htmlResult[i].replace(/@([\-\w]+)/g, '<a target=\'_blank\' href=\'//github.com/$1\'>@$1</a>'));
     } else {
       outputHtml.push($('<div/>').text(htmlResult[i]).html());
     }
-    // add ``` handlers here if needed
   }
 
   return outputHtml.join('<br />');
@@ -79,17 +77,3 @@ IssueDetails.propTypes = {
 };
 
 export default IssueDetails;
-
-
-
-/*
-
-If there are comments on an issue, please fetch them and display them underneath the issue.
-
-In GitHub issues and comments, users are often mentioned with @-notation, e.g.@richparet. When displaying these,
-
-please make the @name a link to the user’s GitHub page.
-*/
-
-
-
